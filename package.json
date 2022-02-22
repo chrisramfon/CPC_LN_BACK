@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "express": "^4.17.3"
+    "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15"
   }
 }
