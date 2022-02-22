@@ -48,14 +48,14 @@ cuenta int not null,
 banco varchar(15),
 constraint PKCuenta primary key (cuenta));
 
-create table Cliente_Deuda (
+create table Cliente_Adeudo (
 id_cliente int not null,
-id_deuda int not null,
-constraint PKCliente_Deuda primary key (id_cliente, id_deuda),
-constraint FKCliente_DeudaC foreign key (id_cliente) 
+id_Adeudo int not null,
+constraint PKCliente_Adeudo primary key (id_cliente, id_Adeudo),
+constraint FKCliente_AdeudoC foreign key (id_cliente) 
 references Usuario (id),
-constraint FKCliente_DeudaD foreign key (id_deuda)
-references Deuda (id));
+constraint FKCliente_AdeudoD foreign key (id_Adeudo)
+references Adeudo (id));
 
 create table Empleado_Usuario (
 id_usuario int not null,
@@ -66,11 +66,11 @@ references Usuario (id),
 constraint FKEmpleado_Usuario foreign key (id_empleado)
 references Empleado (id));
 
-create table Cliente_Deuda (
+create table Cliente_Cuenta (
 cuenta int not null,
 id_cliente int not null,
-constraint PKCliente_Deuda primary key (cuenta, id_cliente),
-constraint FKCliente_DeudaCu foreign key (cuenta)
+constraint PKCliente_Cuenta primary key (cuenta, id_cliente),
+constraint FKCliente_CuentaCu foreign key (cuenta)
 references Cuenta (cuenta),
 constraint FKCliente_CuentaCl foreign key (id_cliente)
 references Cliente (id));

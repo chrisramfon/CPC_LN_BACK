@@ -5,9 +5,9 @@ const mysqlconnection = {}
 
 mysqlconnection.conf = mysql.createConnection ({
     host: 'localhost',
-    user: 'sa',
-    password: 'secret',
-    database: 'LimpiezaLN'
+    user: 'root',
+    password: 'Instala1.',
+    database: 'LimpiezaN'
 });
 
 module.exports = mysqlconnection;

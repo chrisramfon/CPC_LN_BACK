@@ -1,5 +1,7 @@
 const conn = require('../controllers/mysqlconnection');
 const mysql = require('mysql');
+const res = require('express/lib/response');
+const { send } = require('express/lib/response');
 
 const iniciosesion = {}
 
@@ -9,8 +11,9 @@ iniciosesion.conectar = ()=>{
           console.error('error connecting: ' + err.stack);
           return;
         }
-        console.log('connected as id ' + connection.threadId);
+        console.log('connected as id ' + conn.conf.threadId);
       });
+      console.log('Conectó chido');
 }
 
 module.exports = iniciosesion;
