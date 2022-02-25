@@ -1,7 +1,4 @@
 const conn = require('../controllers/mysqlconnection');
-const mysql = require('mysql');
-const res = require('express/lib/response');
-const { send } = require('express/lib/response');
 
 const iniciosesion = {}
 
