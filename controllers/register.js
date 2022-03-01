@@ -2,6 +2,7 @@ const conn = require('../controllers/mysqlconnection');
 const bcrypt = require('bcrypt');
 const util = require('util');
 
+
 const register = {}
 
 register.reg = async(req, res)=>{
@@ -20,7 +21,6 @@ register.reg = async(req, res)=>{
         const idU = rowsU.insertId; 
 
         const rowsEU = await conn.conf.query('insert into Empleado_Usuario (id_usuario, id_empleado) values(?, ?)', [idU, idE]);
-
         res.send('Registro insertado con éxito');
     } catch (error) {
         throw error;
