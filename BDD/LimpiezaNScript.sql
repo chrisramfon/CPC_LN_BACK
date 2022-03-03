@@ -74,5 +74,3 @@ constraint FKCliente_CuentaCu foreign key (cuenta)
 references Cuenta (cuenta),
 constraint FKCliente_CuentaCl foreign key (id_cliente)
 references Cliente (id));
-
-
