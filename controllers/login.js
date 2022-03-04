@@ -28,15 +28,3 @@ login.log = async (req, res) => {
 
 module.exports = login;
 
-
-/*
-
-if(rows == undefined){
-            
-        }else{
-            res.send('Datos incorrectos');
-        }
-        
-
-
-*/

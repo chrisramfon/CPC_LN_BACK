@@ -5,7 +5,7 @@ use LimpiezaN;
 create table Usuario (
 id int not null auto_increment,
 usuario varchar(20) not null,
-pass varchar(20) not null,
+pass varchar(100) not null,
 correo varchar(50) not null,
 token varchar(100),
 estado int not null,
@@ -39,13 +39,13 @@ nombre varchar(30) not null,
 apellido1 varchar(30) not null,
 apellido2 varchar(30),
 telefono varchar(20),
-correo varchar(50),
 estado int not null,
 constraint PKEmpleado primary key (id));
 
 create table Cuenta (
 cuenta int not null,
 banco varchar(15),
+estado int not null,
 constraint PKCuenta primary key (cuenta));
 
 create table Cliente_Adeudo (
